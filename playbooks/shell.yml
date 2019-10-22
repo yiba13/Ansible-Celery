@@ -1,0 +1,6 @@
+- hosts: localhost
+  tasks:
+    - name: 测试 shell
+      shell: echo "/tmp/s not exit" >> /tmp/ansible.log
+      args:
+        creates: /tmp/s

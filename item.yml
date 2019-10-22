@@ -1,0 +1,9 @@
+- hosts: localhost
+  remote_user: root
+  sudo: yes
+  tasks: 
+    - name: apt-get install lrzsz htop
+      shell: apt-get install {{ item }}
+      tags: apt install
+      with_items: 
+      - ['lrzsz','htop']

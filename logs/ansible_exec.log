@@ -1,0 +1,129 @@
+2019-10-21 22:00:53,876 p=817 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:00:53,876 p=817 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:00:53,908 p=817 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:00:55,802 p=817 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-21 22:03:59,640 p=860 u=shiyanlou |  ERROR! Missing required action
+2019-10-21 22:04:17,620 p=869 u=shiyanlou |  Encryption successful
+2019-10-21 22:04:37,808 p=886 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:04:37,808 p=886 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:04:37,825 p=886 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:04:37,855 p=886 u=shiyanlou |  ERROR! Attempting to decrypt but no vault secrets found
+2019-10-21 22:05:30,344 p=896 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:05:30,345 p=896 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:05:30,365 p=896 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:05:31,636 p=896 u=shiyanlou |   [WARNING]: Could not match supplied host pattern, ignoring: locahost
+
+2019-10-21 22:05:31,646 p=896 u=shiyanlou |  PLAY [locahost] ***************************************************************************************************
+2019-10-21 22:05:31,646 p=896 u=shiyanlou |  skipping: no hosts matched
+2019-10-21 22:05:31,646 p=896 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-21 22:06:13,162 p=911 u=shiyanlou |  Decryption successful
+2019-10-21 22:06:37,122 p=930 u=shiyanlou |   [WARNING]: Error in vault password prompt (default): Passwords do not match
+
+2019-10-21 22:06:37,123 p=930 u=shiyanlou |  ERROR! Passwords do not match
+2019-10-21 22:06:44,544 p=939 u=shiyanlou |  Encryption successful
+2019-10-21 22:06:53,041 p=949 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:06:53,041 p=949 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:06:53,060 p=949 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:06:54,224 p=949 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-21 22:06:54,244 p=949 u=shiyanlou |  TASK [Gathering Facts] ********************************************************************************************
+2019-10-21 22:07:03,351 p=949 u=shiyanlou |  ok: [localhost]
+2019-10-21 22:07:03,411 p=949 u=shiyanlou |  TASK [Ping] *******************************************************************************************************
+2019-10-21 22:07:04,266 p=949 u=shiyanlou |  ok: [localhost]
+2019-10-21 22:07:04,276 p=949 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-21 22:07:04,276 p=949 u=shiyanlou |  localhost                  : ok=2    changed=0    unreachable=0    failed=0   
+2019-10-21 22:07:12,176 p=1021 u=shiyanlou |  Decryption successful
+2019-10-21 22:08:12,957 p=1030 u=shiyanlou |   [ERROR]: User interrupted execution
+
+2019-10-21 22:08:46,862 p=1046 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:08:46,862 p=1046 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:08:46,881 p=1046 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:08:48,001 p=1046 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-21 22:08:48,062 p=1046 u=shiyanlou |  TASK [Ping] *******************************************************************************************************
+2019-10-21 22:08:48,772 p=1046 u=shiyanlou |  ok: [localhost]
+2019-10-21 22:08:48,781 p=1046 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-21 22:08:48,781 p=1046 u=shiyanlou |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2019-10-21 22:09:54,242 p=1079 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:09:54,242 p=1079 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:09:54,261 p=1079 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:09:56,247 p=1079 u=shiyanlou |  localhost | CHANGED | rc=0 >>
+/tmp
+
+2019-10-21 22:14:15,021 p=1130 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:14:15,021 p=1130 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:14:15,041 p=1130 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:14:16,166 p=1130 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-21 22:14:16,230 p=1130 u=shiyanlou |  TASK [测试 shell] ***************************************************************************************************
+2019-10-21 22:14:17,004 p=1130 u=shiyanlou |  changed: [localhost]
+2019-10-21 22:14:17,015 p=1130 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-21 22:14:17,016 p=1130 u=shiyanlou |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2019-10-21 22:17:05,496 p=1211 u=shiyanlou |  ERROR! Missing target hosts
+2019-10-21 22:17:16,956 p=1220 u=shiyanlou |   [WARNING]: Unable to parse /home/shiyanlou/ansibl_ui/scripts/inventory as an inventory source
+
+2019-10-21 22:17:16,957 p=1220 u=shiyanlou |   [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2019-10-21 22:17:16,980 p=1220 u=shiyanlou |   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not
+match 'all'
+
+2019-10-21 22:17:19,646 p=1220 u=shiyanlou |  localhost | CHANGED => {
+    "changed": true,
+    "checksum": "cc6297cf16ddfd8132b508fa08a147cf1eabec64",
+    "dest": "/tmp/hosts",
+    "gid": 1000,
+    "group": "shiyanlou",
+    "md5sum": "7437562c110edefa547ccea3fd25937f",
+    "mode": "0644",
+    "owner": "shiyanlou",
+    "size": 302,
+    "src": "/home/shiyanlou/.ansible/tmp/ansible-tmp-1571667438.2093432-92897113733942/source",
+    "state": "file",
+    "uid": 1000
+}
+2019-10-22 22:14:08,389 p=3042 u=shiyanlou |    hosts (8):
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      web1
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      192.168.1.1
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      192.168.1.2
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      db-a.product
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      db-b.product
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      db-c.product
+2019-10-22 22:14:08,400 p=3042 u=shiyanlou |      db-d.product
+2019-10-22 22:14:08,401 p=3042 u=shiyanlou |      db-e.product
+2019-10-22 22:16:31,043 p=3051 u=shiyanlou |  localhost | SUCCESS => {
+    "msg": ""
+}
+2019-10-22 22:17:03,807 p=3070 u=shiyanlou |  localhost | SUCCESS => {
+    "msg": ""
+}
+2019-10-22 22:17:20,123 p=3084 u=shiyanlou |  localhost | SUCCESS => {
+    "msg": "I am shiyanlou"
+}
