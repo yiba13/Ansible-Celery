@@ -172,3 +172,60 @@ shiyanlou
 2019-10-23 21:41:31,246 p=2409 u=shiyanlou |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
 2019-10-23 21:41:31,246 p=2409 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
 2019-10-23 21:41:42,431 p=2427 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 22:02:37,871 p=764 u=shiyanlou |  PLAY [localhost] *************************************************************************************************************************
+2019-10-23 22:02:37,969 p=764 u=shiyanlou |  TASK [检查redis-server文件是否存在] **************************************************************************************************************
+2019-10-23 22:02:39,383 p=764 u=shiyanlou |  ok: [localhost]
+2019-10-23 22:02:39,384 p=764 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at 0x7faf7b8bd8d0>): Error 111
+connecting to 127.0.0.1:6379. Connection refused.
+
+2019-10-23 22:02:39,506 p=764 u=shiyanlou |  TASK [安装redis] ***************************************************************************************************************************
+2019-10-23 22:02:39,552 p=764 u=shiyanlou |  skipping: [localhost]
+2019-10-23 22:02:39,553 p=764 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_skipped) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at 0x7faf7b8bd8d0>): name 'host' is
+not defined
+
+2019-10-23 22:02:39,622 p=764 u=shiyanlou |  TASK [Redis配置文件] *************************************************************************************************************************
+2019-10-23 22:02:41,007 p=764 u=shiyanlou |  ok: [localhost]
+2019-10-23 22:02:41,082 p=764 u=shiyanlou |  TASK [检测Redis服务是否启动] *********************************************************************************************************************
+2019-10-23 22:02:41,808 p=764 u=shiyanlou |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "/usr/bin/redis-cli quit", "delta": "0:00:00.013781", "end": "2019-10-23 22:02:41.756997", "msg": "non-zero return code", "rc": 1, "start": "2019-10-23 22:02:41.743216", "stderr": "Could not connect to Redis at 127.0.0.1:6379: Connection refused", "stderr_lines": ["Could not connect to Redis at 127.0.0.1:6379: Connection refused"], "stdout": "", "stdout_lines": []}
+2019-10-23 22:02:41,808 p=764 u=shiyanlou |  ...ignoring
+2019-10-23 22:02:41,809 p=764 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_failed) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at 0x7faf7b8bd8d0>): Error 111
+connecting to 127.0.0.1:6379. Connection refused.
+
+2019-10-23 22:02:41,890 p=764 u=shiyanlou |  TASK [启动Redis服务，如果redis 未启动] *************************************************************************************************************
+2019-10-23 22:02:42,348 p=764 u=shiyanlou |  changed: [localhost]
+2019-10-23 22:02:42,365 p=764 u=shiyanlou |  PLAY RECAP *******************************************************************************************************************************
+2019-10-23 22:02:42,366 p=764 u=shiyanlou |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2019-10-23 22:02:42,366 p=764 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 4 seconds
+2019-10-23 22:09:36,844 p=992 u=shiyanlou |  ERROR! Unexpected Exception, this is probably a bug: __init__() missing 1 required positional argument: 'id'
+2019-10-23 22:09:36,844 p=992 u=shiyanlou |  to see the full traceback, use -vvv
+2019-10-23 22:09:36,860 p=992 u=shiyanlou |  the full traceback was:
+
+Traceback (most recent call last):
+  File "/home/shiyanlou/py3/bin/ansible", line 118, in <module>
+    exit_code = cli.run()
+  File "/home/shiyanlou/py3/lib/python3.5/site-packages/ansible/cli/adhoc.py", line 179, in run
+    result = self._tqm.run(play)
+  File "/home/shiyanlou/py3/lib/python3.5/site-packages/ansible/executor/task_queue_manager.py", line 230, in run
+    self.load_callbacks()
+  File "/home/shiyanlou/py3/lib/python3.5/site-packages/ansible/executor/task_queue_manager.py", line 209, in load_callbacks
+    callback_obj = callback_plugin()
+TypeError: __init__() missing 1 required positional argument: 'id'
+
+2019-10-23 22:11:38,148 p=1023 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-23 22:11:38,148 p=1023 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at 0x7f533f0c01d0>): 'str' object has
+no attribute 'name'
+
+2019-10-23 22:11:38,161 p=1023 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 22:14:33,928 p=1069 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-23 22:14:33,946 p=1069 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 22:29:51,391 p=1287 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds

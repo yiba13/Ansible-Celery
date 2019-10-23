@@ -22,7 +22,7 @@ class CallbackModule(CallbackBase):
 
     def _write_to_save(self, data):  # 写入 redis ，调用 rpush 进行 redis 的 list 操作
         msg = json.dumps(data, ensure_ascii=False)
-        self.r.rpush(self.id, msg)
+        self.r.rpush(self.id, u"%s" % msg)
         # 为了方便查看，我们 print 写入 redis 的字符串的前 50 个字符
         print("\33[34m写入Redis：%.50s......\33[0m" % msg)
 
