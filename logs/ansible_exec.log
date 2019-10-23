@@ -127,3 +127,5 @@ match 'all'
 2019-10-22 22:17:20,123 p=3084 u=shiyanlou |  localhost | SUCCESS => {
     "msg": "I am shiyanlou"
 }
+2019-10-23 20:57:42,352 p=1420 u=shiyanlou |  	to retry, use: --limit @/home/shiyanlou/.ansible-retry/test_debug.retry
+
