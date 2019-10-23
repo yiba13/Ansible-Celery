@@ -129,3 +129,46 @@ match 'all'
 }
 2019-10-23 20:57:42,352 p=1420 u=shiyanlou |  	to retry, use: --limit @/home/shiyanlou/.ansible-retry/test_debug.retry
 
+2019-10-23 21:28:16,683 p=1883 u=shiyanlou |  localhost | CHANGED | rc=0 >>
+shiyanlou
+
+2019-10-23 21:28:16,701 p=1883 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 2 seconds
+2019-10-23 21:30:46,404 p=1950 u=shiyanlou |  PLAY [localhost] *************************************************************************************************************************
+2019-10-23 21:30:46,501 p=1950 u=shiyanlou |  TASK [检查redis-server文件是否存在] **************************************************************************************************************
+2019-10-23 21:30:47,652 p=1950 u=shiyanlou |  ok: [localhost]
+2019-10-23 21:30:47,731 p=1950 u=shiyanlou |  TASK [安装redis] ***************************************************************************************************************************
+2019-10-23 21:30:47,792 p=1950 u=shiyanlou |  skipping: [localhost]
+2019-10-23 21:30:47,871 p=1950 u=shiyanlou |  TASK [Redis配置文件] *************************************************************************************************************************
+2019-10-23 21:30:49,219 p=1950 u=shiyanlou |  ok: [localhost]
+2019-10-23 21:30:49,288 p=1950 u=shiyanlou |  TASK [检测Redis服务是否启动] *********************************************************************************************************************
+2019-10-23 21:30:50,047 p=1950 u=shiyanlou |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "/usr/bin/redis-cli quit", "delta": "0:00:00.091687", "end": "2019-10-23 21:30:49.994893", "msg": "non-zero return code", "rc": 1, "start": "2019-10-23 21:30:49.903206", "stderr": "Could not connect to Redis at 127.0.0.1:6379: Connection refused", "stderr_lines": ["Could not connect to Redis at 127.0.0.1:6379: Connection refused"], "stdout": "", "stdout_lines": []}
+2019-10-23 21:30:50,048 p=1950 u=shiyanlou |  ...ignoring
+2019-10-23 21:30:50,108 p=1950 u=shiyanlou |  TASK [启动Redis服务，如果redis 未启动] *************************************************************************************************************
+2019-10-23 21:30:50,672 p=1950 u=shiyanlou |  changed: [localhost]
+2019-10-23 21:30:50,681 p=1950 u=shiyanlou |  PLAY RECAP *******************************************************************************************************************************
+2019-10-23 21:30:50,681 p=1950 u=shiyanlou |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2019-10-23 21:30:50,681 p=1950 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 4 seconds
+2019-10-23 21:37:58,013 p=2192 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-23 21:37:58,026 p=2192 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 21:39:24,703 p=2238 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-23 21:39:24,718 p=2238 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 21:41:12,341 p=2372 u=shiyanlou |  localhost | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+2019-10-23 21:41:12,351 p=2372 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-23 21:41:31,048 p=2409 u=shiyanlou |  PLAY [localhost] *************************************************************************************************************************
+2019-10-23 21:41:31,130 p=2409 u=shiyanlou |  TASK [Debug] *****************************************************************************************************************************
+2019-10-23 21:41:31,232 p=2409 u=shiyanlou |  ok: [localhost] => {
+    "msg": "Hello"
+}
+2019-10-23 21:41:31,246 p=2409 u=shiyanlou |  PLAY RECAP *******************************************************************************************************************************
+2019-10-23 21:41:31,246 p=2409 u=shiyanlou |  localhost                  : ok=1    changed=0    unreachable=0    failed=0   
+2019-10-23 21:41:31,246 p=2409 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-23 21:41:42,431 p=2427 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
