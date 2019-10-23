@@ -229,3 +229,59 @@ no attribute 'name'
 }
 2019-10-23 22:14:33,946 p=1069 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
 2019-10-23 22:29:51,391 p=1287 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 0 seconds
+2019-10-24 03:16:31,945 p=2253 u=shiyanlou |  PLAY [localhost] ***************************************************************
+2019-10-24 03:16:32,022 p=2253 u=shiyanlou |  TASK [shell] *******************************************************************
+2019-10-24 03:16:32,795 p=2253 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:16:32,796 p=2253 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin (<ansible
+.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackMo
+dule object at 0x7f32451cfa90>): Error 111 connecting to 127.0.0.1:6379.
+Connection refused.
+
+2019-10-24 03:16:32,951 p=2253 u=shiyanlou |  TASK [echo success] ************************************************************
+2019-10-24 03:16:33,279 p=2253 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:16:33,342 p=2253 u=shiyanlou |  TASK [debug] *******************************************************************
+2019-10-24 03:16:33,427 p=2253 u=shiyanlou |  ok: [localhost] => {
+    "msg": "root"
+}
+2019-10-24 03:16:33,441 p=2253 u=shiyanlou |  PLAY RECAP *********************************************************************
+2019-10-24 03:16:33,441 p=2253 u=shiyanlou |  localhost                  : ok=3    changed=2    unreachable=0    failed=0   
+2019-10-24 03:16:33,441 p=2253 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-24 03:28:33,962 p=2348 u=shiyanlou |  PLAY [localhost] ***************************************************************
+2019-10-24 03:28:34,032 p=2348 u=shiyanlou |  TASK [shell] *******************************************************************
+2019-10-24 03:28:34,623 p=2348 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:28:34,624 p=2348 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin (<ansible
+.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackMo
+dule object at 0x7f9d2f2e6ba8>): Error 111 connecting to 127.0.0.1:6379.
+Connection refused.
+
+2019-10-24 03:28:34,687 p=2348 u=shiyanlou |  TASK [echo success] ************************************************************
+2019-10-24 03:28:35,013 p=2348 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:28:35,081 p=2348 u=shiyanlou |  TASK [debug] *******************************************************************
+2019-10-24 03:28:35,131 p=2348 u=shiyanlou |  fatal: [localhost]: FAILED! => {"msg": "template error while templating string: expected token 'end of print statement', got 'b'. String: {{ s.stdout b.stdout }}"}
+2019-10-24 03:28:35,132 p=2348 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_failed) in callback plugin (<ans
+ible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.Callba
+ckModule object at 0x7f9d2f2e6ba8>): Error 111 connecting to 127.0.0.1:6379.
+Connection refused.
+
+2019-10-24 03:28:35,146 p=2348 u=shiyanlou |  	to retry, use: --limit @/home/shiyanlou/.ansible-retry/sudo.retry
+
+2019-10-24 03:28:35,146 p=2348 u=shiyanlou |  PLAY RECAP *********************************************************************
+2019-10-24 03:28:35,146 p=2348 u=shiyanlou |  localhost                  : ok=2    changed=2    unreachable=0    failed=1   
+2019-10-24 03:28:35,146 p=2348 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-24 03:29:26,647 p=2434 u=shiyanlou |  PLAY [localhost] ***************************************************************
+2019-10-24 03:29:26,712 p=2434 u=shiyanlou |  TASK [shell] *******************************************************************
+2019-10-24 03:29:27,288 p=2434 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:29:27,289 p=2434 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin (<ansible
+.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackMo
+dule object at 0x7f473781d978>): Error 111 connecting to 127.0.0.1:6379.
+Connection refused.
+
+2019-10-24 03:29:27,361 p=2434 u=shiyanlou |  TASK [echo success] ************************************************************
+2019-10-24 03:29:27,693 p=2434 u=shiyanlou |  changed: [localhost]
+2019-10-24 03:29:27,760 p=2434 u=shiyanlou |  TASK [debug] *******************************************************************
+2019-10-24 03:29:27,842 p=2434 u=shiyanlou |  ok: [localhost] => {
+    "msg": "total 32\n-rw-rw-r-- 1 shiyanlou shiyanlou  121 Oct 22 21:47 fetch.yml\n-rw-rw-r-- 1 shiyanlou shiyanlou  756 Oct 20 00:17 redis_opt.yml\n-rw-rw-r-- 1 shiyanlou shiyanlou  145 Oct 21 22:14 shell.yml\n-rw-rw-r-- 1 shiyanlou shiyanlou  238 Oct 24 03:29 sudo.yml\ndrwxrwxr-x 2 shiyanlou shiyanlou 4096 Oct 21 22:23 templates\n-rw-rw-r-- 1 shiyanlou shiyanlou  220 Oct 21 22:26 template.yml\n-rw-rw-r-- 1 shiyanlou shiyanlou   88 Oct 23 20:58 test_debug.yml\n-rw------- 1 shiyanlou shiyanlou   57 Oct 21 22:07 test.yml"
+}
+2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  PLAY RECAP *********************************************************************
+2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  localhost                  : ok=3    changed=2    unreachable=0    failed=0   
+2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds

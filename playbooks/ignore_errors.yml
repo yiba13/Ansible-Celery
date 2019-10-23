@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - command: /bin/false
+      register: result
+      ignore_errors: True
+
+    - name:
+      debug: msg="failed"
+      when: result is failed
+    
+    - debug: msg="success"
+      when: result is succeeded
+   
+    - debug: msg="jump"
+      when: result is skipped
