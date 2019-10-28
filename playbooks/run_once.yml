@@ -1,0 +1,5 @@
+- hosts: localhost
+  tasks:
+    - command: hostname
+      run_once: true
+      delegate_to: localhost

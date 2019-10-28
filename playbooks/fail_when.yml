@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+    - command: echo 'this is failed test'
+      register: result
+      failed_when: "'failed' in result.stdout"
+      ignore_errors: True
+
+
+    - debug:
+        msg: 'changed'
+      changed_when: "'failed' in result.stdout"
+
+    - shell: echo 'no changed'
+      changed_when: False

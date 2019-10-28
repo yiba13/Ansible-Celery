@@ -1,0 +1,5 @@
+- hosts: localhost
+  any_errors_fatal: True
+  tasks:
+    - name: '任务必须全部执行成功'
+      command: echo '测试 any_errors_fatal'

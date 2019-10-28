@@ -35,7 +35,7 @@ class CallbackModule(CallbackBase):
         print(msg)
 
     def v2_runner_on_ok(self, result, **kwargs):
-        "处理成功任务，跳过 setup 模块的结果"
+        #"处理成功任务，跳过 setup 模块的结果"
         host = result._host
         if "ansible_facts" in result._result.keys():    # 我们忽略 setup 操作的结果
             print("\33[32mSetUp 操作，不Save结果\33[0m")
@@ -47,7 +47,7 @@ class CallbackModule(CallbackBase):
                 "status": "success"
             })
     def v2_runner_on_failed(self, result, ignore_errors=False, **kwargs):
-        "处理执行失败的任务，有些任务失败会被忽略，所有有两种状态"
+        #"处理执行失败的任务，有些任务失败会被忽略，所有有两种状态"
         host = result._host
         if ignore_errors:
             status = "ignoring"
@@ -60,7 +60,8 @@ class CallbackModule(CallbackBase):
                 "status": status
             })
     def v2_runner_on_skipped(self, result, *args, **kwargs):
-        "处理跳过的任务"
+        #"处理跳过的任务"
+        host = result._host
         self._write_to_save({
                 "host": host.name,
                 "result": result._result,
@@ -68,7 +69,8 @@ class CallbackModule(CallbackBase):
                 "status": "skipped"
             })
     def v2_runner_on_unreachable(self, result, **kwargs):
-        "处理主机不可达的任务"
+        #"处理主机不可达的任务"
+        host = result._host
         self._write_to_save({
                 "host": host.name,
                 "result": result._result,

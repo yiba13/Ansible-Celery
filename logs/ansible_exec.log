@@ -285,3 +285,100 @@ Connection refused.
 2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  PLAY RECAP *********************************************************************
 2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  localhost                  : ok=3    changed=2    unreachable=0    failed=0   
 2019-10-24 03:29:27,851 p=2434 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-28 20:25:28,249 p=783 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-28 20:25:28,300 p=783 u=shiyanlou |  TASK [Gathering Facts] ********************************************************************************************
+2019-10-28 20:25:32,447 p=783 u=shiyanlou |  ok: [localhost]
+2019-10-28 20:25:32,511 p=783 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:25:32,571 p=783 u=shiyanlou |  skipping: [localhost] => (item=0) 
+2019-10-28 20:25:32,586 p=783 u=shiyanlou |  skipping: [localhost] => (item=2) 
+2019-10-28 20:25:32,597 p=783 u=shiyanlou |  skipping: [localhost] => (item=4) 
+2019-10-28 20:25:33,204 p=783 u=shiyanlou |  changed: [localhost] => (item=6)
+2019-10-28 20:25:33,484 p=783 u=shiyanlou |  changed: [localhost] => (item=8)
+2019-10-28 20:25:33,766 p=783 u=shiyanlou |  changed: [localhost] => (item=10)
+2019-10-28 20:25:33,768 p=783 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7ff88abf0b00>): Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+2019-10-28 20:25:33,942 p=783 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:25:33,978 p=783 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_skipped) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7ff88abf0b00>): name 'host' is not defined
+
+2019-10-28 20:25:34,032 p=783 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:25:34,151 p=783 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-28 20:25:34,151 p=783 u=shiyanlou |  localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+2019-10-28 20:25:34,152 p=783 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 6 seconds
+2019-10-28 20:26:12,967 p=904 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-28 20:26:13,047 p=904 u=shiyanlou |  TASK [检查redis-server文件是否存在] ***************************************************************************************
+2019-10-28 20:26:13,873 p=904 u=shiyanlou |  ok: [localhost]
+2019-10-28 20:26:13,876 p=904 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7f0f6566db38>): Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+2019-10-28 20:26:13,952 p=904 u=shiyanlou |  TASK [安装redis] ****************************************************************************************************
+2019-10-28 20:26:14,001 p=904 u=shiyanlou |  skipping: [localhost]
+2019-10-28 20:26:14,002 p=904 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_skipped) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7f0f6566db38>): name 'host' is not defined
+
+2019-10-28 20:26:14,063 p=904 u=shiyanlou |  TASK [Redis配置文件] **************************************************************************************************
+2019-10-28 20:26:15,263 p=904 u=shiyanlou |  ok: [localhost]
+2019-10-28 20:26:15,325 p=904 u=shiyanlou |  TASK [检测Redis服务是否启动] **********************************************************************************************
+2019-10-28 20:26:16,123 p=904 u=shiyanlou |  fatal: [localhost]: FAILED! => {"changed": true, "cmd": "/usr/bin/redis-cli quit", "delta": "0:00:00.154658", "end": "2019-10-28 20:26:16.071248", "msg": "non-zero return code", "rc": 1, "start": "2019-10-28 20:26:15.916590", "stderr": "Could not connect to Redis at 127.0.0.1:6379: Connection refused", "stderr_lines": ["Could not connect to Redis at 127.0.0.1:6379: Connection refused"], "stdout": "", "stdout_lines": []}
+2019-10-28 20:26:16,123 p=904 u=shiyanlou |  ...ignoring
+2019-10-28 20:26:16,124 p=904 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_failed) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7f0f6566db38>): Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+2019-10-28 20:26:16,182 p=904 u=shiyanlou |  TASK [启动Redis服务，如果redis 未启动] **************************************************************************************
+2019-10-28 20:26:16,663 p=904 u=shiyanlou |  changed: [localhost]
+2019-10-28 20:26:16,680 p=904 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-28 20:26:16,681 p=904 u=shiyanlou |  localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+2019-10-28 20:26:16,681 p=904 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds
+2019-10-28 20:26:25,341 p=1032 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-28 20:26:25,421 p=1032 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:26:25,469 p=1032 u=shiyanlou |  skipping: [localhost] => (item=0) 
+2019-10-28 20:26:25,482 p=1032 u=shiyanlou |  skipping: [localhost] => (item=2) 
+2019-10-28 20:26:25,506 p=1032 u=shiyanlou |  skipping: [localhost] => (item=4) 
+2019-10-28 20:26:26,143 p=1032 u=shiyanlou |  changed: [localhost] => (item=6)
+2019-10-28 20:26:26,461 p=1032 u=shiyanlou |  changed: [localhost] => (item=8)
+2019-10-28 20:26:26,754 p=1032 u=shiyanlou |  changed: [localhost] => (item=10)
+2019-10-28 20:26:26,825 p=1032 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:26:26,863 p=1032 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_skipped) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7f9686a33978>): name 'host' is not defined
+
+2019-10-28 20:26:26,924 p=1032 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:26:27,001 p=1032 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-28 20:26:27,002 p=1032 u=shiyanlou |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2019-10-28 20:26:27,002 p=1032 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-28 20:32:50,385 p=1132 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-28 20:32:50,461 p=1132 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:32:50,516 p=1132 u=shiyanlou |  skipping: [localhost] => (item=0) 
+2019-10-28 20:32:50,531 p=1132 u=shiyanlou |  skipping: [localhost] => (item=2) 
+2019-10-28 20:32:50,541 p=1132 u=shiyanlou |  skipping: [localhost] => (item=4) 
+2019-10-28 20:32:51,162 p=1132 u=shiyanlou |  changed: [localhost] => (item=6)
+2019-10-28 20:32:51,441 p=1132 u=shiyanlou |  changed: [localhost] => (item=8)
+2019-10-28 20:32:51,731 p=1132 u=shiyanlou |  changed: [localhost] => (item=10)
+2019-10-28 20:32:51,791 p=1132 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:32:51,830 p=1132 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_skipped) in callback plugin
+(<ansible.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackModule object at
+0x7ff3fc36a828>): name 'host' is not defined
+
+2019-10-28 20:32:51,896 p=1132 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:32:51,966 p=1132 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-28 20:32:51,966 p=1132 u=shiyanlou |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2019-10-28 20:32:51,966 p=1132 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 1 seconds
+2019-10-28 20:34:47,501 p=1223 u=shiyanlou |  PLAY [localhost] **************************************************************************************************
+2019-10-28 20:34:47,564 p=1223 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:34:47,619 p=1223 u=shiyanlou |  skipping: [localhost] => (item=0) 
+2019-10-28 20:34:47,629 p=1223 u=shiyanlou |  skipping: [localhost] => (item=2) 
+2019-10-28 20:34:47,647 p=1223 u=shiyanlou |  skipping: [localhost] => (item=4) 
+2019-10-28 20:34:48,281 p=1223 u=shiyanlou |  changed: [localhost] => (item=6)
+2019-10-28 20:34:49,551 p=1223 u=shiyanlou |  changed: [localhost] => (item=8)
+2019-10-28 20:34:49,847 p=1223 u=shiyanlou |  changed: [localhost] => (item=10)
+2019-10-28 20:34:49,904 p=1223 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:34:50,002 p=1223 u=shiyanlou |  TASK [command] ****************************************************************************************************
+2019-10-28 20:34:50,080 p=1223 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
+2019-10-28 20:34:50,081 p=1223 u=shiyanlou |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
+2019-10-28 20:34:50,081 p=1223 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 2 seconds

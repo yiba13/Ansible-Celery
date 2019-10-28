@@ -1,0 +1,20 @@
+- hosts: localhost
+  tasks:
+   - name: Attempt and graceful roll back demo
+     block:
+       - debug:
+           msg: 'mission fail'
+       - name: force fail
+         command: /bin/false
+       - debug:
+           msg: 'cannot go'
+     rescue:
+       - debug:
+           msg: 'catch error'
+       - name: 'force fail'
+         command: /bin/fasle
+       - debug:
+           msg: 'cannot go'
+     always:
+       - debug:
+           msg: 'finally'

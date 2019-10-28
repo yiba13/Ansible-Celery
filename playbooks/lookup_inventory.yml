@@ -1,0 +1,10 @@
+- hosts: localhost
+  tasks:
+    - debug:
+        msg: "{{ item }}"
+      loop: "{{ groups['all'] }}"
+    
+
+    - debug:
+        msg: "{{ item }}"
+      loop: "{{ ansible_play_batch }}"
