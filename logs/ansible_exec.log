@@ -382,3 +382,24 @@ Connection refused.
 2019-10-28 20:34:50,080 p=1223 u=shiyanlou |  PLAY RECAP ********************************************************************************************************
 2019-10-28 20:34:50,081 p=1223 u=shiyanlou |  localhost                  : ok=1    changed=1    unreachable=0    failed=0   
 2019-10-28 20:34:50,081 p=1223 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 2 seconds
+2019-10-29 22:30:47,933 p=1254 u=shiyanlou |  PLAY [localhost] ***************************************************************
+2019-10-29 22:30:47,968 p=1254 u=shiyanlou |  TASK [Gathering Facts] *********************************************************
+2019-10-29 22:30:50,467 p=1254 u=shiyanlou |  ok: [localhost]
+2019-10-29 22:30:50,529 p=1254 u=shiyanlou |  TASK [restart services] ********************************************************
+2019-10-29 22:30:51,106 p=1254 u=shiyanlou |  changed: [localhost]
+2019-10-29 22:30:51,107 p=1254 u=shiyanlou |   [WARNING]: Failure using method (v2_runner_on_ok) in callback plugin (<ansible
+.plugins.callback./home/shiyanlou/ansible_ui/callback_plugins/redis2.CallbackMo
+dule object at 0x7ff6d8b86ef0>): Error 111 connecting to 127.0.0.1:6379.
+Connection refused.
+
+2019-10-29 22:30:51,173 p=1254 u=shiyanlou |  RUNNING HANDLER [debug] ********************************************************
+2019-10-29 22:30:51,298 p=1254 u=shiyanlou |  ok: [localhost] => {
+    "msg": "restart A"
+}
+2019-10-29 22:30:51,311 p=1254 u=shiyanlou |  RUNNING HANDLER [debug] ********************************************************
+2019-10-29 22:30:51,429 p=1254 u=shiyanlou |  ok: [localhost] => {
+    "msg": "restart B"
+}
+2019-10-29 22:30:51,451 p=1254 u=shiyanlou |  PLAY RECAP *********************************************************************
+2019-10-29 22:30:51,451 p=1254 u=shiyanlou |  localhost                  : ok=4    changed=1    unreachable=0    failed=0   
+2019-10-29 22:30:51,451 p=1254 u=shiyanlou |  Playbook run took 0 days, 0 hours, 0 minutes, 3 seconds

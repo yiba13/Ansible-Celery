@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+    - name: push conf
+      command: date
+
+      notify:
+        - notify_tasks
+  handlers:
+    - name: notify_tasks
+      debug:
+        msg: 'handlers task test'

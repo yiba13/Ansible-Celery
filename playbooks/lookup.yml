@@ -1,0 +1,35 @@
+- hosts: localhost
+  vars:
+    # read file
+    - file_value: "{{ lookup('file', '/tmp/pm.txt').split('\n') }}"
+    - dict_variable: {'a': 1,'b':2,'c':3}
+  tasks:
+    - debug: 
+        msg: "file_value is {{ file_value }}"
+    # skip error
+    - debug: msg="{{ lookup('file','/i',errors='ignore')}}"
+
+    - name: lookup_dict
+      debug:
+        msg: 'dict is {{ item.key }} - {{ item.value }}'
+      with_items:
+        - "{{lookup('dict',dict_variable,wantlist=True)}}" 
+
+    - name: yml list
+      debug:
+        msg: "{{ lookup('fileglob', './*yml')}}"
+
+    - name: read var
+      debug:
+        msg: "{{ lookup('env','PWD') }}"
+
+    - name: random var
+      debug:
+        msg: "{{ item }}"
+      with_random_choice:
+        "{{ file_value }}"
+
+    - name: sequence
+      debug: 
+        msg: "{{ item }}"
+      with_sequence: start=4 end=16 stride=2

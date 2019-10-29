@@ -1,0 +1,14 @@
+- hosts: localhost
+
+  handlers:
+    - name:
+      debug: msg="restart A"
+      listen: "restart services"
+    - name:
+      debug: msg="restart B"
+      listen: "restart services"
+
+  tasks:
+    - name: restart services
+      command: echo "this task restart all services"
+      notify: "restart services"
